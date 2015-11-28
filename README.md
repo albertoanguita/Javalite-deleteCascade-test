@@ -31,7 +31,7 @@ In the test, we create two movies and relate each movie with one actor and one r
 
 ## deleteCascadeShallow()
 
-* Movie, actor, movie to actor record and review are deleted from database.db.
+* Movie, movie to actor record and review are deleted from database.db.
 
 * Only the callback of the movie is triggered.
 
