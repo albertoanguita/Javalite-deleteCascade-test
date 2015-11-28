@@ -9,7 +9,7 @@ public class Movie extends Model {
 
     @Override
     public void beforeDelete() {
-        System.out.println("Movie '" + get("title") + "' deleted!!!");
+        System.err.println("Movie '" + get("title") + "' deleted!!!");
     }
 
 }
