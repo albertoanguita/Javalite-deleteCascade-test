@@ -12,7 +12,7 @@ All models override the beforeDelete() method, printing on the screen the event.
 
 Additional files:
 * pom.xml: maven definitions
-* Database.db: the sqlite database
+* database.db: the sqlite database
 * Database.java: script for creating the database
 * Test.java: the test code. Run this class to execute the code. The test prints the results on System.out
 
@@ -22,14 +22,18 @@ In the test, we create two movies and relate each movie with one actor and one r
 
 ## deleteCascade()
 
-The callbacks of the movie, the related actor and the related review are triggered, but not the callback of the MoviesActors record.
+* Movie, actor, movie to actor record and review are deleted from database.db.
 
-Only the movie itself is frozen.
+* The callbacks of the movie, the related actor and the related review are triggered, but not the callback of the MoviesActors record.
+
+* Only the movie itself is frozen.
 
 
 ## deleteCascadeShallow()
 
-Only the callback of the movie is triggered.
+* Movie, actor, movie to actor record and review are deleted from database.db.
 
-Only the movie itself is frozen.
+* Only the callback of the movie is triggered.
+
+* Only the movie itself is frozen.
 
