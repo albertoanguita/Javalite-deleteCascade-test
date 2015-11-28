@@ -1,6 +1,6 @@
 # Javalite-deleteCascade-test
 
-The test uses a very simple database with one one-to-many relation and one many-to-many relation. The database is SQLite.
+The test uses a very simple database with one one-to-many relation and one many-to-many relation. The database is SQLite. The code has been tested with versions 1.4.11 and 1.4.12-SNAPSHOT.
 
 There are 4 models:
 * Movie: has a one-to-many relation with Review, and a many-to-many relation with Actor
