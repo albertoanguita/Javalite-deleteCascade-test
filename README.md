@@ -18,6 +18,18 @@ Additional files:
 
 In the test, we create two movies and relate each movie with one actor and one review. One movie is deleted with deleteCascade(), and the other with deleteCascadeShallow(). After each delete, the test prints which entities are frozen and which are not.
 
+# Obtained output
+
+## deleteCascade()
+
+The callbacks of the movie, the related actor and the related review are triggered, but not the callback of the MoviesActors record.
+
+Only the movie itself is frozen.
 
 
+## deleteCascadeShallow()
+
+Only the callback of the movie is triggered.
+
+Only the movie itself is frozen.
 
