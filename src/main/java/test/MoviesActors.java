@@ -11,7 +11,7 @@ public class MoviesActors extends Model {
 
     @Override
     public void beforeDelete() {
-        System.out.println("Movie to Actor '" + get("id") + "' deleted!!!");
+        System.err.println("Movie to Actor '" + get("id") + "' deleted!!!");
     }
 
 }

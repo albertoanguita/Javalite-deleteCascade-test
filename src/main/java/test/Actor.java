@@ -9,7 +9,7 @@ public class Actor extends Model {
 
     @Override
     public void beforeDelete() {
-        System.out.println("Actor '" + get("name") + "' deleted!!!");
+        System.err.println("Actor '" + get("name") + "' deleted!!!");
     }
 
 }

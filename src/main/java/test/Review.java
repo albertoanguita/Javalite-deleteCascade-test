@@ -9,7 +9,7 @@ public class Review extends Model {
 
     @Override
     public void beforeDelete() {
-        System.out.println("Review '" + get("content") + "' deleted!!!");
+        System.err.println("Review '" + get("content") + "' deleted!!!");
     }
 
 }

@@ -37,42 +37,40 @@ public class Test {
 
             Review review1 = new Review();
             review1.set("content", "First review");
-            review1.saveIt();
             Review review2 = new Review();
             review2.set("content", "Second review");
-            review2.saveIt();
 
             movie1.add(review1);
             movie2.add(review2);
 
-            System.out.println("Items are set up.");
-            System.out.println("'Rocky' has a many to many relation with 'Silvester Stallone'.");
-            System.out.println("'Rocky' has a one to many relation with First review.");
-            System.out.println("'Alien' has a many to many relation with 'Sigourney Weaver'.");
-            System.out.println("'Alien' has a one to many relation with 'Second review'.");
-            System.out.println();
+            System.err.println("Items are set up.");
+            System.err.println("'Rocky' has a many to many relation with 'Silvester Stallone'.");
+            System.err.println("'Rocky' has a one to many relation with First review.");
+            System.err.println("'Alien' has a many to many relation with 'Sigourney Weaver'.");
+            System.err.println("'Alien' has a one to many relation with 'Second review'.");
+            System.err.println();
 
-            System.out.println("Deleting Rocky in cascade...");
-            System.out.println("----------------------------");
+            System.err.println("Deleting Rocky in cascade...");
+            System.err.println("----------------------------");
             movie1.deleteCascade();
-            System.out.println("Checking what items are frozen...");
-            System.out.println("Rocky is frozen: " + movie1.isFrozen());
-            System.out.println("Silvester Stallone is frozen: " + actor1.isFrozen());
-            System.out.println("Rocky to Silvester Stallone is frozen: " + moviesActors1.isFrozen());
-            System.out.println("Review for Rocky is frozen: " + review1.isFrozen());
-            System.out.println("--------------------------------------------------------");
-            System.out.println();
+            System.err.println("Checking what items are frozen...");
+            System.err.println("Rocky is frozen: " + movie1.isFrozen());
+            System.err.println("Silvester Stallone is frozen: " + actor1.isFrozen());
+            System.err.println("Rocky to Silvester Stallone is frozen: " + moviesActors1.isFrozen());
+            System.err.println("Review for Rocky is frozen: " + review1.isFrozen());
+            System.err.println("--------------------------------------------------------");
+            System.err.println();
 
-            System.out.println("Deleting Alien in cascade shallow...");
-            System.out.println("------------------------------------");
+            System.err.println("Deleting Alien in cascade shallow...");
+            System.err.println("------------------------------------");
             movie2.deleteCascadeShallow();
-            System.out.println("Checking what items are frozen...");
-            System.out.println("Alien is frozen: " + movie2.isFrozen());
-            System.out.println("Sigourney Weaver is frozen: " + actor2.isFrozen());
-            System.out.println("Alien to Sigourney Weaver is frozen: " + moviesActors2.isFrozen());
-            System.out.println("Review for Alien is frozen: " + review2.isFrozen());
-            System.out.println("--------------------------------------------------------");
-            System.out.println();
+            System.err.println("Checking what items are frozen...");
+            System.err.println("Alien is frozen: " + movie2.isFrozen());
+            System.err.println("Sigourney Weaver is frozen: " + actor2.isFrozen());
+            System.err.println("Alien to Sigourney Weaver is frozen: " + moviesActors2.isFrozen());
+            System.err.println("Review for Alien is frozen: " + review2.isFrozen());
+            System.err.println("--------------------------------------------------------");
+            System.err.println();
 
             Base.close();
         } catch (Exception e) {
